@@ -14,7 +14,7 @@ Resources:
       WorkerType: G.1X
       NumberOfWorkers: 3
       DefaultArguments:
-        "--additional-python-modules": "s3://mycicdglue-bucket/modules.zip"
+        "--additional-python-modules": "s3://mycicdglue-bucket/scripts/modules.zip"
 
 
   GlueServiceRole:

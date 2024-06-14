@@ -1,0 +1,21 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.12
+    commands:
+      - echo "Nothing to install ....."
+
+  build:
+    commands:
+      - echo " Nothing to build ...."
+      - echo $CODEBUILD_SRC_DIR
+      - ls -l
+      - zip -r modules.zip modules
+           
+  post_build:
+    commands:
+      - echo "   Deployment complete !!!!!!!!    "
+      - aws s3 cp modules.zip s3://my-bucket-2024-05-31-new/scripts/
+      - aws s3 cp jobs s3://my-bucket-2024-05-31-new/scripts/
+      

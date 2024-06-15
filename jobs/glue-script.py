@@ -3,8 +3,8 @@ import sessionCreation
 
 spark = createSession()
 
-input_path = "s3://mycicdglue-bucket/input/emp.txt"
-output_path = "s3://mycicdglue-bucket/output/emp.json"
+input_path = "s3://mybuck-yap01/input/emp.csv"
+output_path = "s3://mybuck-yap01/output/emp.json"
 
 df = spark.read.format("csv").load(input_path)
 

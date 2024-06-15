@@ -13,6 +13,8 @@ Resources:
       GlueVersion: "2.0"
       WorkerType: G.1X
       NumberOfWorkers: 3
+      DefaultArguments:
+        "--extra-py-files": "s3://mybuck-yap01/scripts/jobs/modules.zip"
        
   GlueServiceRole:
     Type: AWS::IAM::Role

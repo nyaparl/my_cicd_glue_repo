@@ -14,9 +14,7 @@ Resources:
       WorkerType: G.1X
       NumberOfWorkers: 3
       DefaultArguments:
-        "--additional-python-modules": "s3://mybuck-yap01/scripts/modules.zip"
-
-
+       
   GlueServiceRole:
     Type: AWS::IAM::Role
     Properties:

@@ -16,6 +16,6 @@ phases:
   post_build:
     commands:
       - echo "   Deployment complete !!!!!!!!    "
-      - aws s3 cp modules.zip s3://mycicdglue-bucket/scripts/
+      - aws s3 cp modules.zip s3://mybuck-yap01/scripts/
       
       

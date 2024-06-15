@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
 
-spark =  SparkSession.builder.appName("cicd").setMaster("local[*]").getOrCreate()
+spark =  SparkSession.builder.appName("cicd").master("local[*]").getOrCreate()
 
 input_path = "s3://mybuck-yap01/input/emp.csv"
 output_path = "s3://mybuck-yap01/output/emp.json"
